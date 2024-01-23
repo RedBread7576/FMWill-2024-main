@@ -4,6 +4,8 @@
 
 package frc.robot;
 
+import com.revrobotics.CANSparkBase.IdleMode;
+
 import edu.wpi.first.math.geometry.Translation3d;
 import edu.wpi.first.math.util.Units;
 import swervelib.math.Matter;
@@ -39,6 +41,37 @@ public final class Constants
     // Hold time on motor brakes when disabled
     public static final double WHEEL_LOCK_TIME = 8; // seconds
   }
+
+  public static final class ArmConstants {
+    public static final int armMotorID = 9 ;
+
+
+
+    public static final double armConversionPositionFactor = 360.0/71.0/7.0/2.4923 ;
+
+    public static final double armKP = 0.00715 ;
+    public static final double armKI = 0.00000 ;
+    public static final double armKIMax = 0.00680;
+    public static final double armKIZone = 2.5;
+    public static final double armKD = 0.00500;//900
+    public static final double armKFF = 0.0 ;
+
+    public static final  IdleMode armNeutralMode = IdleMode.kBrake ;
+    public static final boolean armInvert = false ;
+
+    public static final double voltageComp = 12.0 ;
+    public static final Boolean voltageCompBoolean = true ;
+    public static final int armContinuousCurrentLimit = 40;
+
+    public static final double stickDeadband = 0.04;
+
+  }
+
+     public static final class ShooterConstants
+  {
+
+  }
+
 
   public static class OperatorConstants
   {
